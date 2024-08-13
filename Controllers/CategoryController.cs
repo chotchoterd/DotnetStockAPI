@@ -1,8 +1,12 @@
 using DotnetStockAPI.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using StockAPI.Models;
 
 namespace DotnetStockAPI.Controllers;
 
+// [Authorize(Roles = UserRolesModel.Admin + "," + UserRolesModel.Manager)]
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class CategoryController : ControllerBase
@@ -70,7 +74,7 @@ public class CategoryController : ControllerBase
 
         _context.categories.Remove(cat);
         _context.SaveChanges();
-        
+
         return Ok(cat);
     }
 }
