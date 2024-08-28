@@ -8,11 +8,11 @@ using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 // For Entity Framework with Npgsql
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
+builder.Services.AddDbContext<ApplicationDbContext>(options => 
 {
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")); // Local
+    // options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnectionRender")); // Render
 });
 
 // Adding Identity
@@ -28,8 +28,7 @@ builder.Services.AddAuthentication(options =>
     options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
 })
 // Adding Jwt Bearer
-.AddJwtBearer(options =>
-{
+.AddJwtBearer(options  => {
     options.SaveToken = true;
     options.RequireHttpsMetadata = false;
     options.TokenValidationParameters = new TokenValidationParameters()
@@ -43,7 +42,7 @@ builder.Services.AddAuthentication(options =>
 });
 
 // Allow CORS
-builder.Services.AddCors(options =>
+builder.Services.AddCors(options => 
 {
     options.AddPolicy("MultipleOrigins",
     policy =>
@@ -81,18 +80,19 @@ builder.Services.AddCors(options =>
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+
 builder.Services.AddSwaggerGen(
     options =>
     {
         options.SupportNonNullableReferenceTypes();
-        options.SwaggerDoc("v1", new() { Title = "StockAPI", Version = "v1" });
+        options.SwaggerDoc("v1", new() { Title = "Stock API with .NET 8 and PostgreSQL", Version = "v1" });
 
-        options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
+        options.AddSecurityDefinition("Bearer",  new OpenApiSecurityScheme()
         {
             Name = "Authorization",
             Type = SecuritySchemeType.ApiKey,
             Scheme = "Bearer",
-            BearerFormat = "JWT",
+            BearerFormat= "JWT",
             In = ParameterLocation.Header,
             Description = "JWT Authorization header using the Bearer scheme."
         });
@@ -117,18 +117,30 @@ builder.Services.AddSwaggerGen(
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment() || app.Environment.IsProduction()) // Adjust according to your needs
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
+// Use Static Files
+app.UseStaticFiles();
+
+// Redirect HTTP to HTTPS
+if (!app.Environment.IsDevelopment())
+{
+    app.UseHttpsRedirection();  // Only use HTTPS redirection in non-development environments
+}
+
 app.UseHttpsRedirection();
 
+// Use CORS
 app.UseCors("MultipleOrigins");
+
 // Add Authentication
 app.UseAuthentication();
 
+// Add Authorization
 app.UseAuthorization();
 
 app.MapControllers();
