@@ -122,7 +122,7 @@ public class ProductController : ControllerBase
         }
         else
         {
-            product.productpicture = "noimg.png";
+            product.productpicture = "noimg.jpg";
         }
 
         _context.SaveChanges();
@@ -161,7 +161,7 @@ public class ProductController : ControllerBase
                 await image.CopyToAsync(fileStream);
             }
 
-            if (existingProduct.productpicture != "noimg.png")
+            if (existingProduct.productpicture != "noimg.jpg")
             {
                 System.IO.File.Delete(Path.Combine(uploadFolder, existingProduct.productpicture!));
             }
@@ -184,7 +184,7 @@ public class ProductController : ControllerBase
             return NotFound();
         }
 
-        if (product.productpicture != "noimg.png")
+        if (product.productpicture != "noimg.jpg")
         {
             string uploadFolder = Path.Combine(_env.WebRootPath, "uploads");
 

@@ -1,8 +1,20 @@
 {
   "Files": [
     {
-      "Id": "D:\\WorkshopAngularDotnet\\DotnetStockAPI\\wwwroot\\uploads\\c3f73e85-d3e9-4ec0-ac2b-1ff110a3198c.jpg",
-      "PackagePath": "staticwebassets\\uploads\\c3f73e85-d3e9-4ec0-ac2b-1ff110a3198c.jpg"
+      "Id": "D:\\WorkshopAngularDotnet\\DotnetStockAPI\\wwwroot\\uploads\\0abf8085-feff-4769-941a-2b7c4d2a2df5.png",
+      "PackagePath": "staticwebassets\\uploads\\0abf8085-feff-4769-941a-2b7c4d2a2df5.png"
+    },
+    {
+      "Id": "D:\\WorkshopAngularDotnet\\DotnetStockAPI\\wwwroot\\uploads\\85d185e1-4c91-4f25-bf00-370a71118520.png",
+      "PackagePath": "staticwebassets\\uploads\\85d185e1-4c91-4f25-bf00-370a71118520.png"
+    },
+    {
+      "Id": "D:\\WorkshopAngularDotnet\\DotnetStockAPI\\wwwroot\\uploads\\8fb45c6f-9e90-48bf-b665-5e30fafa7203.jpg",
+      "PackagePath": "staticwebassets\\uploads\\8fb45c6f-9e90-48bf-b665-5e30fafa7203.jpg"
+    },
+    {
+      "Id": "D:\\WorkshopAngularDotnet\\DotnetStockAPI\\wwwroot\\uploads\\cb9203f0-12f3-4257-8036-13818085f9c9.png",
+      "PackagePath": "staticwebassets\\uploads\\cb9203f0-12f3-4257-8036-13818085f9c9.png"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.DotnetStockAPI.Microsoft.AspNetCore.StaticWebAssets.props",
