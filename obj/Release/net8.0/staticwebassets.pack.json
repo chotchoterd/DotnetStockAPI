@@ -1,0 +1,53 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\WorkshopAngularDotnet\\DotnetStockAPI\\wwwroot\\uploads\\038b0ae4-362e-4556-98b1-5b3a72d17c41.png",
+      "PackagePath": "staticwebassets\\uploads\\038b0ae4-362e-4556-98b1-5b3a72d17c41.png"
+    },
+    {
+      "Id": "D:\\WorkshopAngularDotnet\\DotnetStockAPI\\wwwroot\\uploads\\080179ce-f788-42ff-8cb0-1ba93f7cbbbe.png",
+      "PackagePath": "staticwebassets\\uploads\\080179ce-f788-42ff-8cb0-1ba93f7cbbbe.png"
+    },
+    {
+      "Id": "D:\\WorkshopAngularDotnet\\DotnetStockAPI\\wwwroot\\uploads\\0abf8085-feff-4769-941a-2b7c4d2a2df5.png",
+      "PackagePath": "staticwebassets\\uploads\\0abf8085-feff-4769-941a-2b7c4d2a2df5.png"
+    },
+    {
+      "Id": "D:\\WorkshopAngularDotnet\\DotnetStockAPI\\wwwroot\\uploads\\44b9452c-7b67-4dfc-afec-17675434627b.png",
+      "PackagePath": "staticwebassets\\uploads\\44b9452c-7b67-4dfc-afec-17675434627b.png"
+    },
+    {
+      "Id": "D:\\WorkshopAngularDotnet\\DotnetStockAPI\\wwwroot\\uploads\\6e4b497c-3d02-47c8-9e9a-982850b1093b.png",
+      "PackagePath": "staticwebassets\\uploads\\6e4b497c-3d02-47c8-9e9a-982850b1093b.png"
+    },
+    {
+      "Id": "D:\\WorkshopAngularDotnet\\DotnetStockAPI\\wwwroot\\uploads\\7b668a65-c2fc-4502-99f7-069678ee872a.png",
+      "PackagePath": "staticwebassets\\uploads\\7b668a65-c2fc-4502-99f7-069678ee872a.png"
+    },
+    {
+      "Id": "D:\\WorkshopAngularDotnet\\DotnetStockAPI\\wwwroot\\uploads\\85d185e1-4c91-4f25-bf00-370a71118520.png",
+      "PackagePath": "staticwebassets\\uploads\\85d185e1-4c91-4f25-bf00-370a71118520.png"
+    },
+    {
+      "Id": "D:\\WorkshopAngularDotnet\\DotnetStockAPI\\wwwroot\\uploads\\cb9203f0-12f3-4257-8036-13818085f9c9.png",
+      "PackagePath": "staticwebassets\\uploads\\cb9203f0-12f3-4257-8036-13818085f9c9.png"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.DotnetStockAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.DotnetStockAPI.props",
+      "PackagePath": "build\\DotnetStockAPI.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.DotnetStockAPI.props",
+      "PackagePath": "buildMultiTargeting\\DotnetStockAPI.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.DotnetStockAPI.props",
+      "PackagePath": "buildTransitive\\DotnetStockAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
