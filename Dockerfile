@@ -2,12 +2,12 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
 
 # On Local
-EXPOSE 5033
-ENV ASPNETCORE_URLS=http://+:5033
+# EXPOSE 5033
+# ENV ASPNETCORE_URLS=http://+:5033
 
 # On Render cloud
-# EXPOSE 80
-# EXPOSE 443
+EXPOSE 80
+EXPOSE 443
 
 USER app
 FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:8.0 AS build
