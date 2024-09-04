@@ -11,8 +11,8 @@ var builder = WebApplication.CreateBuilder(args);
 // For Entity Framework with Npgsql
 builder.Services.AddDbContext<ApplicationDbContext>(options => 
 {
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")); // Local
-    // options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnectionRender")); // Render
+    // options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")); // Local
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnectionRender")); // Render
 });
 
 // Adding Identity
